@@ -13,3 +13,37 @@ Remove-File -Path "C:\Users\AlanWild\Desktop\Cloud"
 Remove-Item -Path "C:\Users\AlanWild\Desktop\Cloud"
 Get-Help cat
 Get-Content C:\Users\AlanWild\Documents
+PS C:\Windows\system32> history
+
+PS C:\Windows\system32> Get-History
+
+  Id CommandLine                                                                     
+  -- -----------                                                                     
+   1 history   
+
+PS C:\Windows\system32> Get-Alias Path
+Get-Alias : Cette commande ne trouve pas d’alias correspondant, car l’alias avec 
+name «Path» n’existe pas.
+
+PS C:\Windows\system32> Get-Alias Mkdir
+Get-Alias : Cette commande ne trouve pas d’alias correspondant, car l’alias avec 
+name «Mkdir» n’existe pas.
+
+PS C:\Windows\system32> Get-Alias
+  
+CommandType     Name                                               Version    Source 
+-----------     ----                                               -------    ------ 
+Alias           % -> ForEach-Object                                                  
+Alias           ? -> Where-Object                                                    
+Alias           ac -> Add-Content                                                    
+Alias           asnp -> Add-PSSnapin                                                 
+Alias           cat -> Get-Content    
+
+PS C:\Windows\system32> Get-Content C:\Users\AlanWild\Documents\Quest\Cloud
+
+PS C:\Windows\system32> Set-Content C:\Users\AlanWild\Documents\Quest\Cloud -Value "Ceci est un essai"
+
+PS C:\Windows\system32> Get-Content C:\Users\AlanWild\Documents\Quest\Cloud
+Ceci est un essai
+
+PS C:\Windows\system32> Get-Help -Category Cmdlet
