@@ -197,5 +197,33 @@ Au caractère Ligne:1 : 1
     + FullyQualifiedErrorId : FileOpenFailure,Microsoft.PowerShell.Commands.OutFileCo 
    mmand
  
+PS C:\Windows\system32> Set-Location C:\EvenFolder
+
+PS C:\EvenFolder> cd..
+
+PS C:\> Get-ChildItem
+
+
+    Répertoire : C:\
+
+
+Mode                 LastWriteTime         Length Name                                
+----                 -------------         ------ ----                                
+d-----        12/03/2025     18:04                EvenFolder                          
+d-----        12/03/2025     18:03                FolderTest1                         
+d-----        12/03/2025     18:05                FolderTest2                         
+d-----        12/03/2025     18:05                OddFolder                           
+d-----        07/12/2019     10:14                PerfLogs                            
+d-r---        12/03/2025     17:47                Program Files                       
+d-r---        04/12/2023     03:53                Program Files (x86)                 
+d-----        12/03/2025     16:54                Temp                                
+d-r---        11/03/2025     20:21                Users                               
+d-----        12/03/2025     14:02                Windows                             
+
+
+
+PS C:\> Get-ChildItem -Path .\OddFolder -Recurse > listing.txt
+
+PS C:\> Get-ChildItem -Path .\EvenFolder -Recurse >> listing.txt
 
 PS C:\> 
